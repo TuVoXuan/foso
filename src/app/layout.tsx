@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Raleway, Racing_Sans_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { cn } from "@/lib/utils";
@@ -7,6 +7,12 @@ import { cn } from "@/lib/utils";
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
+});
+
+const racingSansOne = Racing_Sans_One({
+  variable: "--font-racing-sans-one",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("bg-[#F9FBFC]", raleway.className)}>
+      <body
+        className={cn(
+          "bg-[#F9FBFC]",
+          raleway.className,
+          racingSansOne.variable
+        )}
+      >
         <Header />
         {children}
       </body>

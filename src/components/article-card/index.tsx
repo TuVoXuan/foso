@@ -1,11 +1,11 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 import articleThumbnail from "../../assets/images/article-thumbnail.png";
 import Icons from "../icons";
 
 export default function ArticleCard() {
   return (
-    <div>
+    <Link href={"/blog/1"}>
       <div className="rounded-[8px] overflow-hidden xl:rounded-[24px]">
         <Image
           src={articleThumbnail}
@@ -46,6 +46,6 @@ export default function ArticleCard() {
           </div>
         </button>
       </div>
-    </div>
+    </Link>
   );
 }

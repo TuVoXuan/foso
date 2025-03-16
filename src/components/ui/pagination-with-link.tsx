@@ -1,9 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type ReactNode, useCallback } from "react";
+import Icons from "../icons";
 import {
   Pagination,
   PaginationContent,
@@ -18,7 +18,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./select";
-import Icons from "../icons";
 
 export interface PaginationWithLinksProps {
   pageSizeSelectOptions?: {

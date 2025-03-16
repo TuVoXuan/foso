@@ -129,5 +129,19 @@
   --breakpoint-lg: 62rem; /* 992px */
   --breakpoint-xl: 75rem; /* 1200px */
   --breakpoint-2xl: 87.5rem; /* 1400px */
+  --font-racing-sans-one: 'var(--font-racing-sans-one)';
+  --shadow-review-blog-card: 0 1px 3px 0 rgba(18, 18, 23, 0.1), 0 1px 2px 0 rgba(18, 18, 23, 0.06);
+}
+
+@layer utilities {
+  .text-heading {
+    @apply text-[#15AA7A] text-[16px] font-extrabold leading-[1.5] xl:text-[20px]
+  }
+  .text-sub-heading {
+    @apply text-[#15AA7A] text-[14px] font-bold leading-[1.5] xl:text-[16px]
+  }
+  .text-paragraph {
+    @apply text-[#231F20] text-[14px]  font-medium leading-[1.5] xl:text-[16px]
+  }
 }
 

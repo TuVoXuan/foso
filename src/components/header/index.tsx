@@ -38,7 +38,7 @@ const LanguageOptions = [
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [language, setLanguage] = useState(LanguageOptions[0]);
+  const [language] = useState(LanguageOptions[0]);
 
   return (
     <div
@@ -47,13 +47,15 @@ export default function Header() {
         "xl:mx-auto xl:mt-5 2xl:mt-6 2xl:max-w-[1280px] xl:justify-center xl:gap-x-16"
       )}
     >
-      <Image
-        src={logo.src}
-        width={134}
-        height={55.41}
-        alt="logo"
-        className="w-20 h-auto xl:w-[134px] xl:h-[55.41]"
-      />
+      <Link href={"/"}>
+        <Image
+          src={logo.src}
+          width={134}
+          height={55.41}
+          alt="logo"
+          className="w-20 h-auto xl:w-[134px] xl:h-[55.41]"
+        />
+      </Link>
 
       <nav className="hidden xl:flex items-center">
         <ul className="flex gap-x-2 items-center">
